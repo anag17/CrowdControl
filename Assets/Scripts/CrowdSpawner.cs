@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using System.Linq;
 using UnityEngine;
 
 public class CrowdSpawner : MonoBehaviour {
@@ -11,18 +12,18 @@ public class CrowdSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		//TownpersonSpawn ();
 	}
-	
-	private void TownpersonSpawn () {
-		//		int rowNum = sizeZ / (3 * spacing);
-		//		Vector3 location = GetComponent<Transform>().position + new Vector3(10, 0 , -1 * rowNum / 2);
-		//		int numMade = 0;
-		//		float previousZ = location.z + location.z + (numMade / rowNum) + spacing;
-		//		while (numMade < numPeople) {
-		//			GameObject.Instantiate (townsPeople, new Vector3(location.x + (numMade % rowNum), location.y, previousZ + (numMade / rowNum) + spacing), Quaternion.identity);
-		//			numMade++;
-		//		}
-		Vector3 location = GetComponent<Transform>().position + new Vector3(10, 0, -1 * rowNum / 2);
-	}	
+
+//		Random rnd = new Random();
+//		int rowNum = sizeZ / (2 * spacing + 1);
+//		int numMade = 0;
+//		Vector3 location = GetComponent<Transform>().position;
+//		while (numMade < numPeople) {
+//			int randX = rnd.Next (-spacing, spacing);
+//			int randZ = rnd.Next (-spacing, spacing);
+//			GameObject.Instantiate (townsPeople, new Vector3 (location.x + (numMade % rowNum) + randX, location.y, location.z + (numMade / rowNum) + randZ), Quaternion.identity);
+//			numMade++;
+//		}
+//	}	
 }
