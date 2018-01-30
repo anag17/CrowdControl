@@ -7,6 +7,7 @@ public class CrowdSpawner : MonoBehaviour {
 
 	[SerializeField] private GameObject townsPeople;
 	[SerializeField] private int spacing = 1;
+    [SerializeField] private int sizeX = 15;
 	[SerializeField] private int sizeZ = 15;
 	[SerializeField] private int numPeople = 20;
 
@@ -16,7 +17,8 @@ public class CrowdSpawner : MonoBehaviour {
 	}
 
 	private void TownpersonSpawn () {
-		//Random rnd = new Random();
+        //Random rnd = new Random();
+        int colNum = sizeX / (2 * spacing + 1);
 		int rowNum = sizeZ / (2 * spacing + 1);
 		int numMade = 0;
 		Vector3 location = GetComponent<Transform>().position;
@@ -25,7 +27,7 @@ public class CrowdSpawner : MonoBehaviour {
 //			int randZ = rnd.Next (-spacing, spacing);
 			int randX = Random.Range(-spacing, spacing);
 			int randZ = Random.Range(-spacing, spacing);
-			GameObject.Instantiate (townsPeople, new Vector3 (location.x + (numMade % rowNum) + randX, location.y, location.z + (numMade / rowNum) + randZ), Quaternion.identity);
+			GameObject.Instantiate (townsPeople, new Vector3 (location.x + (numMade / colNum) + randX, location.y, location.z + (numMade / rowNum) + randZ), Quaternion.identity);
 			numMade++;
 		}
 	}	
