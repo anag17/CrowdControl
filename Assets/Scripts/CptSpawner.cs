@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		CaptainSpawn ();
-		//TownpersonSpawn ();
+		TownpersonSpawn ();
 	}
 
 	private void CaptainSpawn () {
