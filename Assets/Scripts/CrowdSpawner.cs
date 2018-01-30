@@ -24,8 +24,8 @@ public class CrowdSpawner : MonoBehaviour {
 		while (numMade < numPeople) {
 			int randX = Random.Range(-spacing, spacing);
 			int randZ = Random.Range(-spacing, spacing);
-			GameObject.Instantiate (townsPeople, new Vector3 (location.x + (numMade / colNum) + randX, location.y, location.z + (numMade / rowNum) + randZ), Quaternion.identity);
+			GameObject.Instantiate (townsPeople, new Vector3 (location.x + (numMade % colNum) + randX, location.y, location.z + (numMade / rowNum) + randZ), Quaternion.identity);
 			numMade++;
 		}
-	}	
+	}
 }
