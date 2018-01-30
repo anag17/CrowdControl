@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class CrowdSpawner : MonoBehaviour {
 
-	[SerializeField] private GameObject townsPeople;
+	/*[SerializeField] private GameObject townsPeople;
 	[SerializeField] private int spacing = 1;
 	[SerializeField] private int sizeZ = 15;
 	[SerializeField] private int numPeople = 20;
-
+*/
 	// Use this for initialization
 	void Start () {
 		TownpersonSpawn ();
