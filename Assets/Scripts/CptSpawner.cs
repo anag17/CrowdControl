@@ -5,15 +5,9 @@ using System.Collections.Specialized;
 
 public class CptSpawner : MonoBehaviour {
 
-	public enum POSITIONS
-	{
-		Front = 0,
-		Back = 1,
-		Left = 2,
-		Right = 3
-	}
+	public enum POSITION { Front, Back, Left, Right }
 
-	[SerializeField] private POSITIONS prestonPosition;
+	[SerializeField] private POSITION prestonPosition;
 	[SerializeField] private GameObject preston;
 
 	// Use this for initialization
@@ -24,16 +18,16 @@ public class CptSpawner : MonoBehaviour {
 	private void CaptainSpawn () {
 		Vector3 location = GetComponent<Transform>().position;
 		switch (prestonPosition) {
-			case POSITIONS.Front:
+			case POSITION.Front:
 				GameObject.Instantiate (preston, new Vector3 (location.x + 4, location.y, location.z), Quaternion.identity);
 				break;
-			case POSITIONS.Right:
+			case POSITION.Right:
 				GameObject.Instantiate (preston, new Vector3 (location.x, location.y, location.z + 8), Quaternion.identity);
 				break;
-			case POSITIONS.Left:
+			case POSITION.Left:
 				GameObject.Instantiate (preston, new Vector3 (location.x, location.y, location.z - 8), Quaternion.identity);
 				break;
-			case POSITIONS.Back:
+			case POSITION.Back:
 				GameObject.Instantiate (preston, new Vector3(location.x - 4, location.y, location.z), Quaternion.identity);
 				break;
 		}
