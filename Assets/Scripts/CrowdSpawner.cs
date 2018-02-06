@@ -10,6 +10,7 @@ public class CrowdSpawner : MonoBehaviour {
 	[SerializeField] private int sizeZ = 15;
 	[SerializeField] private int numPeople = 20;
     [SerializeField] private float spacing = 1.0f;
+    [SerializeField] private float radiusOffset = 0.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,8 @@ public class CrowdSpawner : MonoBehaviour {
         bool[,] openLocation = new bool[sizeX, sizeZ];
         int[] focalPoint = { 0, sizeZ / 2 };
         int numMade = 0;
+
+        if (numPeople > sizeX * sizeZ) { numPeople = sizeX * sizeZ; }
 
         for (int i = 0; i < sizeX; i++) {
             for (int j = 0; j < sizeZ; j++) {
@@ -40,8 +43,8 @@ public class CrowdSpawner : MonoBehaviour {
 
                         float chance = (1.0f / distance);
                         if (Random.Range(0.0f, 1.0f) <= chance) {
-                            float randX = Random.Range(-spacing / 2, spacing / 2);
-                            float randZ = Random.Range(-spacing / 2, spacing / 2);
+                            float randX = Random.Range(-spacing / 2 + radiusOffset, spacing / 2 - radiusOffset);
+                            float randZ = Random.Range(-spacing / 2 + radiusOffset, spacing / 2 - radiusOffset);
 							GameObject.Instantiate(townsPeople, new Vector3(location.x + spacing * (i + randX), location.y, location.z + spacing * (j + randZ)), Quaternion.identity).GetComponent<Renderer>().material = materials[numMade % materials.Length];;
                             openLocation[i, j] = false;
                             numMade++;
