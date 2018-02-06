@@ -36,16 +36,12 @@ public class CrowdSpawner : MonoBehaviour {
             for (int i = 0; i < sizeX; i++) {
                 for (int j = 0; j < sizeZ; j++) {
                     if (openLocation[i, j]) {
-                        float distance = ((i - focalPoint[0]) * (i - focalPoint[0]) + (j - focalPoint[1]) * (j - focalPoint[1]));
-                        if (distance < 1) {
-                            distance = 1;
-                        }
-
-                        float chance = (1.0f / distance);
+                        float chance = 1.0f / ((i - focalPoint[0]) * (i - focalPoint[0]) + (j - focalPoint[1]) * (j - focalPoint[1]));
+                        
                         if (Random.Range(0.0f, 1.0f) <= chance) {
                             float randX = Random.Range(-spacing / 2 + radiusOffset, spacing / 2 - radiusOffset);
                             float randZ = Random.Range(-spacing / 2 + radiusOffset, spacing / 2 - radiusOffset);
-							GameObject.Instantiate(townsPeople, new Vector3(location.x + spacing * (i + randX), location.y, location.z + spacing * (j + randZ)), Quaternion.identity).GetComponent<Renderer>().material = materials[numMade % materials.Length];;
+							GameObject.Instantiate(townsPeople, new Vector3(location.x + randX + spacing * i, location.y, location.z + randZ + spacing * j), Quaternion.identity).GetComponent<Renderer>().material = materials[numMade % materials.Length];;
                             openLocation[i, j] = false;
                             numMade++;
                         }
