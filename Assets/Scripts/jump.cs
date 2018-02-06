@@ -9,15 +9,15 @@ public class jump : MonoBehaviour {
 	[SerializeField] private int jumpHeight;
 	[SerializeField] private int jumpProbability;
 	private bool jumping = false;
-    private Transform trans;
+	private Transform trans;
 
-    private void Start() {
-        trans = this.GetComponent<Transform>();
-    }
+	private void Start() {
+		trans = this.GetComponent<Transform>();
+	}
 
-    // Update is called once per frame
-    void Update () {
-        trans.rotation = new Quaternion(0, 0, 0, 0);
+	// Update is called once per frame
+	void Update () {
+		trans.rotation = new Quaternion(0, 0, 0, 0);
 		if (!jumping) {
 			int random = Random.Range(0, 100 - jumpProbability);
 			if (random == 0) {
