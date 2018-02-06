@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crowdMood: 2
-  jumpHeight: 1.5
+  jumpHeight: 80
   jumpProbability: 50
 --- !u!136 &136664836871077620
 CapsuleCollider:
