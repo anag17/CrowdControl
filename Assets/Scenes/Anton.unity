@@ -385,7 +385,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   townsPeople: {fileID: 1678818712866894, guid: 2e91f3efa20184a04a9ad1a57a534f6d,
     type: 2}
-  sizeX: 15
+  materials: []
+  sizeX: 10
   sizeZ: 10
   numPeople: 30
   spacing: 1.5

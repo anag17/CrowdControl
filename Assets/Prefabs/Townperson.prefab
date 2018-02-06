@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd3be452c8c5471d95223e50bc6afc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crowdMood: 1
+  crowdMood: 2
   jumpHeight: 80
   jumpProbability: 50
 --- !u!136 &136664836871077620
