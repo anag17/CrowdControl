@@ -409,10 +409,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   townsPeople: {fileID: 1678818712866894, guid: 2e91f3efa20184a04a9ad1a57a534f6d,
     type: 2}
-  spacing: 3
-  sizeX: 50
-  sizeZ: 20
-  numPeople: 20
+  sizeX: 15
+  sizeZ: 10
+  numPeople: 30
+  spacing: 1.5
 --- !u!4 &990084096
 Transform:
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 990084094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.24, y: 1, z: -3.32}
+  m_LocalPosition: {x: 8.03, y: 1, z: -6.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
