@@ -12,7 +12,7 @@ public class CptSpawner : MonoBehaviour {
 	void Start () {
 		prestonPosition = (int) CrowdVars.GetCaptainPosition();
 		CaptainSpawn ();
-
+		//TownpersonSpawn ();
 	}
 
 	private void CaptainSpawn () {

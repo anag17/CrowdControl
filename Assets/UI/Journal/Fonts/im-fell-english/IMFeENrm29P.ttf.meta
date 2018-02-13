@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: dbf421989ee702f48add31188e6280cd
+timeCreated: 1492644502
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - IM FELL English
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0e6cf36891ccc9c47b884cbce92a937c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
