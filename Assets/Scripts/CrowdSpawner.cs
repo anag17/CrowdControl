@@ -42,7 +42,7 @@ public class CrowdSpawner : MonoBehaviour {
                         if (Random.Range(0.0f, 1.0f) <= chance) {
                             float randX = Random.Range(-spacing / 2, spacing / 2);
                             float randZ = Random.Range(-spacing / 2, spacing / 2);
-							GameObject.Instantiate(townsPeople, new Vector3(location.x + randX + spacing * i, location.y, location.z + randZ + spacing * j), Quaternion.identity).GetComponent<Renderer>().material = materials[numMade % materials.Length];;
+							GameObject.Instantiate (townsPeople, new Vector3 (location.x + randX + spacing * i, location.y, location.z + randZ + spacing * j), Quaternion.Euler(new Vector3(0,-90,0)));//.GetComponent<Renderer>().material = materials[numMade % materials.Length];;
                             openLocation[i, j] = false;
                             numMade++;
                         }
