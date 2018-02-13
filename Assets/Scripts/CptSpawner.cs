@@ -22,14 +22,15 @@ public class CptSpawner : MonoBehaviour {
 				GameObject.Instantiate (preston, new Vector3 (location.x + 4, location.y, location.z), Quaternion.identity);
 				break;
 			case 1:
-				GameObject.Instantiate (preston, new Vector3 (location.x, location.y, location.z + 8), Quaternion.identity);
-				break;
-			case 2:
-				GameObject.Instantiate (preston, new Vector3 (location.x, location.y, location.z - 8), Quaternion.identity);
-				break;
-			case 3:
 				GameObject.Instantiate (preston, new Vector3(location.x - 4, location.y, location.z), Quaternion.identity);
 				break;
+			case 2:
+				GameObject.Instantiate (preston, new Vector3 (location.x, location.y, location.z + 8), Quaternion.identity);
+				break;
+			case 3:
+				GameObject.Instantiate (preston, new Vector3 (location.x, location.y, location.z - 8), Quaternion.identity);
+				break;
+
 		}
 	}
 }
