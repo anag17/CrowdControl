@@ -5,7 +5,6 @@ using UnityEngine;
 public class CrowdSpawner : MonoBehaviour {
 
 	[SerializeField] private GameObject townsPeople;
-	[SerializeField] private Material[] materials;
     [SerializeField] private int sizeX = 15;
 	[SerializeField] private int sizeZ = 15;
 	private int numPeople = 20;
@@ -43,7 +42,7 @@ public class CrowdSpawner : MonoBehaviour {
                         if (Random.Range(0.0f, 1.0f) <= chance) {
                             float randX = Random.Range(-spacing / 2, spacing / 2);
                             float randZ = Random.Range(-spacing / 2, spacing / 2);
-							GameObject.Instantiate (townsPeople, new Vector3 (location.x + randX + spacing * i, location.y, location.z + randZ + spacing * j), Quaternion.Euler(new Vector3(0,-90,0)));//.GetComponent<Renderer>().material = materials[numMade % materials.Length];;
+							GameObject.Instantiate (townsPeople, new Vector3 (location.x + randX + spacing * i, location.y, location.z + randZ + spacing * j), Quaternion.Euler(new Vector3(0,-90,0)));
                             openLocation[i, j] = false;
                             numMade++;
                         }
