@@ -8,11 +8,12 @@ public class CrowdSpawner : MonoBehaviour {
 	[SerializeField] private Material[] materials;
     [SerializeField] private int sizeX = 15;
 	[SerializeField] private int sizeZ = 15;
-	[SerializeField] private int numPeople = 20;
+	private int numPeople = 20;
     [SerializeField] private float spacing = 1.0f;
 
 	// Use this for initialization
 	void Start () {
+		numPeople = CrowdVars.GetCrowdSize();
 		TownpersonSpawn ();
 	}
 
