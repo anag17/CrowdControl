@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/UI.unity
+    guid: 78535294c1b484a019fd5edd13a9716e
+  - enabled: 1
+    path: Assets/Scenes/Anton.unity
+    guid: 5d4dc555ddeb84240b910fcb86a3d35f
+  - enabled: 1
+    path: Assets/Scenes/CharacterTest.unity
+    guid: dd403b659c3b8554ca213c3bf370af4d

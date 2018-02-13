@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 4834519963883018}
   - component: {fileID: 95013095914432498}
   m_Layer: 0
-  m_Name: Redcoat (6)
+  m_Name: Redcoat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

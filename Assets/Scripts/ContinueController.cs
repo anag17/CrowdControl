@@ -11,6 +11,7 @@ public class ContinueController : MonoBehaviour {
 	string dbURL = "http://localhost/bostonmassacre/dataPost.php";
 	public enum POSITION { Front = 0, Back = 1, Left = 2, Right = 3 };
 	public enum MOOD { Calm = 0, Agitated = 1, Hostile = 2 };
+	public string nextScene;
 
 
 	// Use this for initialization
@@ -25,7 +26,7 @@ public class ContinueController : MonoBehaviour {
 
 	public void OnContinueClicked () {
 		StartCoroutine(Upload());
-		SceneManager.LoadScene("Anton");
+		SceneManager.LoadScene(nextScene);
 	}
 
 	IEnumerator Upload()
