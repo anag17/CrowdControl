@@ -16,17 +16,21 @@ public class ContinueController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-			
+		continueButton.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (CrowdVars.CanContinue ()) {
+			continueButton.SetActive (true);
+		}
 	}
 
 	public void OnContinueClicked () {
-		StartCoroutine(Upload());
-		SceneManager.LoadScene(nextScene);
+		if (CrowdVars.CanContinue ()) {
+			StartCoroutine(Upload());
+			SceneManager.LoadScene(nextScene);
+		}
 	}
 
 	IEnumerator Upload()

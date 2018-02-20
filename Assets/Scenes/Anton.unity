@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.57482487, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2356,8 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d1af886bdc64279b73d7e909e8e356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prestonPosition: 0
-  preston: {fileID: 0}
+  preston: {fileID: 1287621035934886, guid: 79d468d06b0ee4b55b358f0eb634fab1, type: 2}
 --- !u!4 &714720764
 Transform:
   m_ObjectHideFlags: 0
@@ -3005,10 +3004,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   townsPeople: {fileID: 1961137085172952, guid: 3b6ee0ba22c0944688a401945b4683eb,
     type: 2}
-  materials: []
   sizeX: 15
   sizeZ: 10
-  numPeople: 50
   spacing: 2
 --- !u!4 &990084096
 Transform:
