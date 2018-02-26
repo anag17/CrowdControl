@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class jump : MonoBehaviour {
 
-	public enum MOOD { Calm = 0, Agitated = 1, Hostile = 2 };
-	[SerializeField] private MOOD crowdMood;
+	private int crowdMood;
 	[SerializeField] private int jumpHeight;
 	[SerializeField] private int jumpProbability;
 	private bool jumping = false;
 	private Transform trans;
 
 	private void Start() {
+		crowdMood = (int) CrowdVars.GetMood();
 		trans = this.GetComponent<Transform>();
 	}
 
